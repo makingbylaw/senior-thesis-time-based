@@ -11,5 +11,6 @@
 typedef struct _PMHeatMapData {
     NSInteger x;
     NSInteger y;
+    NSInteger section;
     NSInteger frequency;
 } PMHeatMapData;

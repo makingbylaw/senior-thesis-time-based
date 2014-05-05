@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>58F9758B-BDB8-4C70-A418-46CBFBF5E425</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TimeBasedHeatMap</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>656B6A80-29A7-4998-B6C6-C90C9CB28BCE</key>
+		<string>ssh://github.com/paupino/senior-thesis-time-based.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TimeBasedHeatMap.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>656B6A80-29A7-4998-B6C6-C90C9CB28BCE</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/paupino/senior-thesis-time-based.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>656B6A80-29A7-4998-B6C6-C90C9CB28BCE</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>656B6A80-29A7-4998-B6C6-C90C9CB28BCE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TimeBasedHeatMap</string>
+		</dict>
+	</array>
+</dict>
+</plist>

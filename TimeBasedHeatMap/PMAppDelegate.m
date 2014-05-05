@@ -79,6 +79,7 @@
         PMHeatMapData mapData;
         mapData.x = x;
         mapData.y = y;
+        mapData.section = section + 1;
         mapData.frequency = frequency;
         NSValue *value = [NSValue valueWithBytes:&mapData objCType:@encode(PMHeatMapData)];
         [sectionData setObject:value atIndexedSubscript:section];
@@ -99,10 +100,10 @@
     [self.label setDrawsBackground:NO];
     [self.label setEditable:NO];
     [self.label setSelectable:NO];
-    [self.label setStringValue:@"12:00 a.m."];
     [self.label setAlignment:NSCenterTextAlignment];
     [self.label setAutoresizingMask:NSViewWidthSizable |  NSViewHeightSizable];
     [self.window.contentView addSubview:self.label];
+    [self updateTime];
     
     // THe timer for changing hours
     [NSTimer scheduledTimerWithTimeInterval:2.0
@@ -119,17 +120,26 @@
         self.view.currentHour ++;
     }
     
-    if (self.view.currentHour == 0) {
-        [self.label setStringValue:@"12:00 a.m."];
-    } else if (self.view.currentHour == 12) {
-        [self.label setStringValue:@"12:00 p.m."];
-    } else if (self.view.currentHour > 12) {
-        NSInteger adjusted = self.view.currentHour - 12;
-        [self.label setStringValue:[NSString stringWithFormat:@"%ld:00 p.m.", (long)adjusted]];
-    } else {
-        [self.label setStringValue:[NSString stringWithFormat:@"%ld:00 a.m.", (long)self.view.currentHour]];
-    }
+    [self updateTime];
     [self.view setNeedsDisplay: YES];
+}
+
+- (void) updateTime {
+    
+    NSInteger adjustedTime = self.view.currentHour - 8;
+    if (adjustedTime < 0)
+        adjustedTime += 24;
+    
+    if (adjustedTime == 0) {
+        [self.label setStringValue:@"12:00 a.m."];
+    } else if (adjustedTime == 12) {
+        [self.label setStringValue:@"12:00 p.m."];
+    } else if (adjustedTime > 12) {
+        NSInteger adjustedToTwelveHour = adjustedTime- 12;
+        [self.label setStringValue:[NSString stringWithFormat:@"%ld:00 p.m.", adjustedToTwelveHour]];
+    } else {
+        [self.label setStringValue:[NSString stringWithFormat:@"%ld:00 a.m.", adjustedTime]];
+    }
 }
 
 @end

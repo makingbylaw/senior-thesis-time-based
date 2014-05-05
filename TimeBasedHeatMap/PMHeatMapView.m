@@ -72,11 +72,19 @@
         
         // Calculate x and y coordinates as well as size
         CGRect rect = CGRectMake(0, 0, boxSize, boxSize);
-        rect.origin.x = heatMapData.x * boxSize;
-        rect.origin.y = heatMapData.y * boxSize;
+        //rect.origin.x = heatMapData.x * boxSize;
+        //rect.origin.y = heatMapData.y * boxSize + 10;
+        rect.origin.x = (3 - heatMapData.x) * boxSize;
+        rect.origin.y = (3 - heatMapData.y) * boxSize + 10;
         
         // Draw a rectangle
         CGContextFillRect(contextRef, rect);
+        
+        /*
+        // TEMP: Draw the section
+        NSString *sectionString = [NSString stringWithFormat:@"%ld", heatMapData.section];
+        [sectionString drawInRect:rect withAttributes:nil];
+         */
     }
 }
 
