@@ -9,18 +9,21 @@
 #import "PMHeatMapView.h"
 #import "PMDataStructures.h"
 
-// Copy by default
-#define SECTIONS 16
+@interface PMHeatMapView() {
+}
+
+@end
 
 @implementation PMHeatMapView
 
-- (id) initWithFrame:(NSRect)frameRect andData:(NSArray*)data {
+- (id) initWithFrame:(NSRect)frameRect data:(NSArray*)data maxFrequency:(NSInteger)maxFrequency {
     self = [super initWithFrame:frameRect];
     if (self) {
         NSLog(@"Initializing %f, %f", frameRect.size.width, frameRect.size.height);
         self.autoresizingMask = NSViewWidthSizable |  NSViewHeightSizable;
         self.data = data;
         self.currentHour = 0;
+        self.maxFrequency = maxFrequency;
     }
     return self;
 }
@@ -48,7 +51,7 @@
     
     // Work out the common width and size
     NSInteger commonWidth = MIN(self.frame.size.width, self.frame.size.height);
-    NSInteger boxSize = commonWidth / 4;
+    NSInteger boxSize = commonWidth / SECTION_DIMENSION;
     
     // Loop through each section and draw it
     for (int i = 0; i < SECTIONS; i++) {
@@ -65,7 +68,7 @@
         NSColor *color;
         
         // For now go along the red scale adjusting the value
-        float alpha = heatMapData.frequency/560.0f;
+        float alpha = (heatMapData.frequency * 1.0f) / self.maxFrequency;
         //NSLog(@"Alpha: %f", alpha);
         color = [NSColor colorWithRed:1.0f green:0.0f blue:0.0f alpha:alpha];
         CGContextSetFillColorWithColor(contextRef, [color CGColor]);

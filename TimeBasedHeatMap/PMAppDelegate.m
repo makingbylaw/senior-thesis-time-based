@@ -10,10 +10,6 @@
 #import "PMHeatMapView.h"
 #import "PMDataStructures.h"
 
-#define HOURS 24
-#define SECTIONS 16
-#define FONT_SIZE 50
-
 @interface PMAppDelegate() {
     NSMutableArray *_data;
 }
@@ -42,6 +38,7 @@
     // Loop through each line
     NSMutableArray *sectionData = nil;
     NSInteger lastHour = -1;
+    NSInteger maxFrequency = 0;
     for (NSString *line in lines) {
         NSArray *arr = [line componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@","]];
         
@@ -58,6 +55,9 @@
         NSInteger y = [[arr objectAtIndex:2] integerValue]; // zero based
         NSInteger hour = [[arr objectAtIndex:3] integerValue]; // zero based
         NSInteger frequency = [[arr objectAtIndex:4] integerValue];
+        if (frequency > maxFrequency) {
+            maxFrequency = frequency;
+        }
         
         // Our data is lined up by
         //   hour then section { x, y, frequency }
@@ -89,7 +89,7 @@
     [_data setObject:sectionData atIndexedSubscript:lastHour];
     
     // Build the view
-    self.view = [[PMHeatMapView alloc] initWithFrame:CGRectMake(0, FONT_SIZE, self.window.frame.size.width, self.window.frame.size.height - FONT_SIZE) andData:_data];
+    self.view = [[PMHeatMapView alloc] initWithFrame:CGRectMake(0, FONT_SIZE, self.window.frame.size.width, self.window.frame.size.height - FONT_SIZE) data:_data maxFrequency:maxFrequency];
     [self.window.contentView addSubview:self.view];
     
     // Build the label

@@ -8,6 +8,11 @@
 
 #import <Cocoa/Cocoa.h>
 
+#define HOURS 24
+#define SECTIONS 16
+#define SECTION_DIMENSION 4
+#define FONT_SIZE 50
+
 typedef struct _PMHeatMapData {
     NSInteger x;
     NSInteger y;

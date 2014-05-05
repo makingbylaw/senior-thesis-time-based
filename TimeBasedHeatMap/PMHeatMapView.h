@@ -10,9 +10,10 @@
 
 @interface PMHeatMapView : NSView
 
-- (id) initWithFrame:(NSRect)frameRect andData:(NSArray*)data;
+- (id) initWithFrame:(NSRect)frameRect data:(NSArray*)data maxFrequency:(NSInteger)maxFrequency;
 
 @property (nonatomic, strong) NSArray *data;
 @property (nonatomic, assign) NSInteger currentHour;
+@property (nonatomic, assign) NSInteger maxFrequency;
 
 @end
