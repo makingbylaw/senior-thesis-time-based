@@ -30,7 +30,7 @@
         [_data addObject:[NSNull null]];
     
     // Load in the CSV
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"data" ofType:@"csv"];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:DATA ofType:@"csv"];
     NSError *error = nil;
     NSString *fileContents = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:&error];
     NSArray *lines = [fileContents componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
@@ -39,6 +39,7 @@
     NSMutableArray *sectionData = nil;
     NSInteger lastHour = -1;
     NSInteger maxFrequency = 0;
+    int total = 0;
     for (NSString *line in lines) {
         NSArray *arr = [line componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@","]];
         
@@ -83,6 +84,7 @@
         mapData.frequency = frequency;
         NSValue *value = [NSValue valueWithBytes:&mapData objCType:@encode(PMHeatMapData)];
         [sectionData setObject:value atIndexedSubscript:section];
+        total ++;
     }
     
     // Also, add the last line
@@ -104,6 +106,9 @@
     [self.label setAutoresizingMask:NSViewWidthSizable |  NSViewHeightSizable];
     [self.window.contentView addSubview:self.label];
     [self updateTime];
+    
+    // Output some details
+    NSLog(@"Total %d, Max Freq %ld", total, maxFrequency);
     
     // THe timer for changing hours
     [NSTimer scheduledTimerWithTimeInterval:2.0

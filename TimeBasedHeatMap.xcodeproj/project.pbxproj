@@ -20,6 +20,7 @@
 		DA1AF9BF19171C2D002CAC7A /* TimeBasedHeatMapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1AF9BE19171C2D002CAC7A /* TimeBasedHeatMapTests.m */; };
 		DA1AF9C919172018002CAC7A /* data.csv in Resources */ = {isa = PBXBuildFile; fileRef = DA1AF9C819172018002CAC7A /* data.csv */; };
 		DA1AF9CC19172C94002CAC7A /* PMHeatMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1AF9CB19172C94002CAC7A /* PMHeatMapView.m */; };
+		DA3242971917C32D002F6EDC /* data2.csv in Resources */ = {isa = PBXBuildFile; fileRef = DA3242961917C32D002F6EDC /* data2.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		DA1AF9CA19172C94002CAC7A /* PMHeatMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMHeatMapView.h; sourceTree = "<group>"; };
 		DA1AF9CB19172C94002CAC7A /* PMHeatMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMHeatMapView.m; sourceTree = "<group>"; };
 		DA1AF9CD1917343C002CAC7A /* PMDataStructures.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMDataStructures.h; sourceTree = "<group>"; };
+		DA3242961917C32D002F6EDC /* data2.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data2.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				DA1AF9C819172018002CAC7A /* data.csv */,
+				DA3242961917C32D002F6EDC /* data2.csv */,
 				DA1AF9A619171C2C002CAC7A /* PMAppDelegate.h */,
 				DA1AF9A719171C2C002CAC7A /* PMAppDelegate.m */,
 				DA1AF9A919171C2C002CAC7A /* MainMenu.xib */,
@@ -242,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA1AF99F19171C2C002CAC7A /* InfoPlist.strings in Resources */,
+				DA3242971917C32D002F6EDC /* data2.csv in Resources */,
 				DA1AF9AD19171C2C002CAC7A /* Images.xcassets in Resources */,
 				DA1AF9C919172018002CAC7A /* data.csv in Resources */,
 				DA1AF9A519171C2C002CAC7A /* Credits.rtf in Resources */,
@@ -479,6 +483,7 @@
 				DA1AF9C419171C2D002CAC7A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DA1AF9C519171C2D002CAC7A /* Build configuration list for PBXNativeTarget "TimeBasedHeatMapTests" */ = {
 			isa = XCConfigurationList;
@@ -487,6 +492,7 @@
 				DA1AF9C719171C2D002CAC7A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

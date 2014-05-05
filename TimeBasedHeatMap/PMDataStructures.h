@@ -9,8 +9,15 @@
 #import <Cocoa/Cocoa.h>
 
 #define HOURS 24
+
+#define DATA @"data"
 #define SECTIONS 16
 #define SECTION_DIMENSION 4
+/*/
+#define DATA @"data2"
+#define SECTIONS 64
+#define SECTION_DIMENSION 8
+*/
 #define FONT_SIZE 50
 
 typedef struct _PMHeatMapData {
