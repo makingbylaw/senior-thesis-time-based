@@ -50,8 +50,8 @@
     NSArray *section = sectionObj;
     
     // Work out the common width and size
-    NSInteger commonWidth = MIN(self.frame.size.width, self.frame.size.height);
-    NSInteger boxSize = commonWidth / SECTION_DIMENSION;
+    float commonWidth = MIN(self.frame.size.width, self.frame.size.height);
+    float boxSize = commonWidth / SECTION_DIMENSION;
     
     // Loop through each section and draw it
     for (int i = 0; i < SECTIONS; i++) {
@@ -77,8 +77,8 @@
         CGRect rect = CGRectMake(0, 0, boxSize, boxSize);
         //rect.origin.x = heatMapData.x * boxSize;
         //rect.origin.y = heatMapData.y * boxSize + 10;
-        rect.origin.x = (3 - heatMapData.x) * boxSize;
-        rect.origin.y = (3 - heatMapData.y) * boxSize + 10;
+        rect.origin.x = ((SECTION_DIMENSION - 1) - heatMapData.x) * boxSize;
+        rect.origin.y = ((SECTION_DIMENSION - 1) - heatMapData.y) * boxSize;
         
         // Draw a rectangle
         CGContextFillRect(contextRef, rect);
