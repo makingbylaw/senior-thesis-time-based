@@ -1,0 +1,482 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DA1AF99519171C2C002CAC7A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1AF99419171C2C002CAC7A /* Cocoa.framework */; };
+		DA1AF99F19171C2C002CAC7A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA1AF99D19171C2C002CAC7A /* InfoPlist.strings */; };
+		DA1AF9A119171C2C002CAC7A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1AF9A019171C2C002CAC7A /* main.m */; };
+		DA1AF9A519171C2C002CAC7A /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = DA1AF9A319171C2C002CAC7A /* Credits.rtf */; };
+		DA1AF9A819171C2C002CAC7A /* PMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1AF9A719171C2C002CAC7A /* PMAppDelegate.m */; };
+		DA1AF9AB19171C2C002CAC7A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA1AF9A919171C2C002CAC7A /* MainMenu.xib */; };
+		DA1AF9AD19171C2C002CAC7A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA1AF9AC19171C2C002CAC7A /* Images.xcassets */; };
+		DA1AF9B419171C2C002CAC7A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1AF9B319171C2C002CAC7A /* XCTest.framework */; };
+		DA1AF9B519171C2C002CAC7A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1AF99419171C2C002CAC7A /* Cocoa.framework */; };
+		DA1AF9BD19171C2C002CAC7A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA1AF9BB19171C2C002CAC7A /* InfoPlist.strings */; };
+		DA1AF9BF19171C2D002CAC7A /* TimeBasedHeatMapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1AF9BE19171C2D002CAC7A /* TimeBasedHeatMapTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DA1AF9B619171C2C002CAC7A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA1AF98919171C2C002CAC7A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA1AF99019171C2C002CAC7A;
+			remoteInfo = TimeBasedHeatMap;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DA1AF99119171C2C002CAC7A /* TimeBasedHeatMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeBasedHeatMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA1AF99419171C2C002CAC7A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		DA1AF99719171C2C002CAC7A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		DA1AF99819171C2C002CAC7A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		DA1AF99919171C2C002CAC7A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DA1AF99C19171C2C002CAC7A /* TimeBasedHeatMap-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TimeBasedHeatMap-Info.plist"; sourceTree = "<group>"; };
+		DA1AF99E19171C2C002CAC7A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DA1AF9A019171C2C002CAC7A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DA1AF9A219171C2C002CAC7A /* TimeBasedHeatMap-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TimeBasedHeatMap-Prefix.pch"; sourceTree = "<group>"; };
+		DA1AF9A419171C2C002CAC7A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		DA1AF9A619171C2C002CAC7A /* PMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMAppDelegate.h; sourceTree = "<group>"; };
+		DA1AF9A719171C2C002CAC7A /* PMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMAppDelegate.m; sourceTree = "<group>"; };
+		DA1AF9AA19171C2C002CAC7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		DA1AF9AC19171C2C002CAC7A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DA1AF9B219171C2C002CAC7A /* TimeBasedHeatMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeBasedHeatMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA1AF9B319171C2C002CAC7A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		DA1AF9BA19171C2C002CAC7A /* TimeBasedHeatMapTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TimeBasedHeatMapTests-Info.plist"; sourceTree = "<group>"; };
+		DA1AF9BC19171C2C002CAC7A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DA1AF9BE19171C2D002CAC7A /* TimeBasedHeatMapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeBasedHeatMapTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DA1AF98E19171C2C002CAC7A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA1AF99519171C2C002CAC7A /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA1AF9AF19171C2C002CAC7A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA1AF9B519171C2C002CAC7A /* Cocoa.framework in Frameworks */,
+				DA1AF9B419171C2C002CAC7A /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DA1AF98819171C2C002CAC7A = {
+			isa = PBXGroup;
+			children = (
+				DA1AF99A19171C2C002CAC7A /* TimeBasedHeatMap */,
+				DA1AF9B819171C2C002CAC7A /* TimeBasedHeatMapTests */,
+				DA1AF99319171C2C002CAC7A /* Frameworks */,
+				DA1AF99219171C2C002CAC7A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DA1AF99219171C2C002CAC7A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA1AF99119171C2C002CAC7A /* TimeBasedHeatMap.app */,
+				DA1AF9B219171C2C002CAC7A /* TimeBasedHeatMapTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DA1AF99319171C2C002CAC7A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA1AF99419171C2C002CAC7A /* Cocoa.framework */,
+				DA1AF9B319171C2C002CAC7A /* XCTest.framework */,
+				DA1AF99619171C2C002CAC7A /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA1AF99619171C2C002CAC7A /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA1AF99719171C2C002CAC7A /* AppKit.framework */,
+				DA1AF99819171C2C002CAC7A /* CoreData.framework */,
+				DA1AF99919171C2C002CAC7A /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		DA1AF99A19171C2C002CAC7A /* TimeBasedHeatMap */ = {
+			isa = PBXGroup;
+			children = (
+				DA1AF9A619171C2C002CAC7A /* PMAppDelegate.h */,
+				DA1AF9A719171C2C002CAC7A /* PMAppDelegate.m */,
+				DA1AF9A919171C2C002CAC7A /* MainMenu.xib */,
+				DA1AF9AC19171C2C002CAC7A /* Images.xcassets */,
+				DA1AF99B19171C2C002CAC7A /* Supporting Files */,
+			);
+			path = TimeBasedHeatMap;
+			sourceTree = "<group>";
+		};
+		DA1AF99B19171C2C002CAC7A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA1AF99C19171C2C002CAC7A /* TimeBasedHeatMap-Info.plist */,
+				DA1AF99D19171C2C002CAC7A /* InfoPlist.strings */,
+				DA1AF9A019171C2C002CAC7A /* main.m */,
+				DA1AF9A219171C2C002CAC7A /* TimeBasedHeatMap-Prefix.pch */,
+				DA1AF9A319171C2C002CAC7A /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DA1AF9B819171C2C002CAC7A /* TimeBasedHeatMapTests */ = {
+			isa = PBXGroup;
+			children = (
+				DA1AF9BE19171C2D002CAC7A /* TimeBasedHeatMapTests.m */,
+				DA1AF9B919171C2C002CAC7A /* Supporting Files */,
+			);
+			path = TimeBasedHeatMapTests;
+			sourceTree = "<group>";
+		};
+		DA1AF9B919171C2C002CAC7A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA1AF9BA19171C2C002CAC7A /* TimeBasedHeatMapTests-Info.plist */,
+				DA1AF9BB19171C2C002CAC7A /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DA1AF99019171C2C002CAC7A /* TimeBasedHeatMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA1AF9C219171C2D002CAC7A /* Build configuration list for PBXNativeTarget "TimeBasedHeatMap" */;
+			buildPhases = (
+				DA1AF98D19171C2C002CAC7A /* Sources */,
+				DA1AF98E19171C2C002CAC7A /* Frameworks */,
+				DA1AF98F19171C2C002CAC7A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TimeBasedHeatMap;
+			productName = TimeBasedHeatMap;
+			productReference = DA1AF99119171C2C002CAC7A /* TimeBasedHeatMap.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DA1AF9B119171C2C002CAC7A /* TimeBasedHeatMapTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA1AF9C519171C2D002CAC7A /* Build configuration list for PBXNativeTarget "TimeBasedHeatMapTests" */;
+			buildPhases = (
+				DA1AF9AE19171C2C002CAC7A /* Sources */,
+				DA1AF9AF19171C2C002CAC7A /* Frameworks */,
+				DA1AF9B019171C2C002CAC7A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DA1AF9B719171C2C002CAC7A /* PBXTargetDependency */,
+			);
+			name = TimeBasedHeatMapTests;
+			productName = TimeBasedHeatMapTests;
+			productReference = DA1AF9B219171C2C002CAC7A /* TimeBasedHeatMapTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DA1AF98919171C2C002CAC7A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = PM;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Paul Mason";
+				TargetAttributes = {
+					DA1AF9B119171C2C002CAC7A = {
+						TestTargetID = DA1AF99019171C2C002CAC7A;
+					};
+				};
+			};
+			buildConfigurationList = DA1AF98C19171C2C002CAC7A /* Build configuration list for PBXProject "TimeBasedHeatMap" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DA1AF98819171C2C002CAC7A;
+			productRefGroup = DA1AF99219171C2C002CAC7A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DA1AF99019171C2C002CAC7A /* TimeBasedHeatMap */,
+				DA1AF9B119171C2C002CAC7A /* TimeBasedHeatMapTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DA1AF98F19171C2C002CAC7A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA1AF99F19171C2C002CAC7A /* InfoPlist.strings in Resources */,
+				DA1AF9AD19171C2C002CAC7A /* Images.xcassets in Resources */,
+				DA1AF9A519171C2C002CAC7A /* Credits.rtf in Resources */,
+				DA1AF9AB19171C2C002CAC7A /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA1AF9B019171C2C002CAC7A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA1AF9BD19171C2C002CAC7A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DA1AF98D19171C2C002CAC7A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA1AF9A119171C2C002CAC7A /* main.m in Sources */,
+				DA1AF9A819171C2C002CAC7A /* PMAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA1AF9AE19171C2C002CAC7A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA1AF9BF19171C2D002CAC7A /* TimeBasedHeatMapTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DA1AF9B719171C2C002CAC7A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA1AF99019171C2C002CAC7A /* TimeBasedHeatMap */;
+			targetProxy = DA1AF9B619171C2C002CAC7A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DA1AF99D19171C2C002CAC7A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA1AF99E19171C2C002CAC7A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DA1AF9A319171C2C002CAC7A /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA1AF9A419171C2C002CAC7A /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		DA1AF9A919171C2C002CAC7A /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA1AF9AA19171C2C002CAC7A /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		DA1AF9BB19171C2C002CAC7A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA1AF9BC19171C2C002CAC7A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DA1AF9C019171C2D002CAC7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		DA1AF9C119171C2D002CAC7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		DA1AF9C319171C2D002CAC7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TimeBasedHeatMap/TimeBasedHeatMap-Prefix.pch";
+				INFOPLIST_FILE = "TimeBasedHeatMap/TimeBasedHeatMap-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DA1AF9C419171C2D002CAC7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TimeBasedHeatMap/TimeBasedHeatMap-Prefix.pch";
+				INFOPLIST_FILE = "TimeBasedHeatMap/TimeBasedHeatMap-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		DA1AF9C619171C2D002CAC7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TimeBasedHeatMap.app/Contents/MacOS/TimeBasedHeatMap";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TimeBasedHeatMap/TimeBasedHeatMap-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "TimeBasedHeatMapTests/TimeBasedHeatMapTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		DA1AF9C719171C2D002CAC7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TimeBasedHeatMap.app/Contents/MacOS/TimeBasedHeatMap";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TimeBasedHeatMap/TimeBasedHeatMap-Prefix.pch";
+				INFOPLIST_FILE = "TimeBasedHeatMapTests/TimeBasedHeatMapTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DA1AF98C19171C2C002CAC7A /* Build configuration list for PBXProject "TimeBasedHeatMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA1AF9C019171C2D002CAC7A /* Debug */,
+				DA1AF9C119171C2D002CAC7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA1AF9C219171C2D002CAC7A /* Build configuration list for PBXNativeTarget "TimeBasedHeatMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA1AF9C319171C2D002CAC7A /* Debug */,
+				DA1AF9C419171C2D002CAC7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DA1AF9C519171C2D002CAC7A /* Build configuration list for PBXNativeTarget "TimeBasedHeatMapTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA1AF9C619171C2D002CAC7A /* Debug */,
+				DA1AF9C719171C2D002CAC7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DA1AF98919171C2C002CAC7A /* Project object */;
+}
