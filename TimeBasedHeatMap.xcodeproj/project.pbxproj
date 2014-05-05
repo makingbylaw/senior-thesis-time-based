@@ -18,6 +18,8 @@
 		DA1AF9B519171C2C002CAC7A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1AF99419171C2C002CAC7A /* Cocoa.framework */; };
 		DA1AF9BD19171C2C002CAC7A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA1AF9BB19171C2C002CAC7A /* InfoPlist.strings */; };
 		DA1AF9BF19171C2D002CAC7A /* TimeBasedHeatMapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1AF9BE19171C2D002CAC7A /* TimeBasedHeatMapTests.m */; };
+		DA1AF9C919172018002CAC7A /* data.csv in Resources */ = {isa = PBXBuildFile; fileRef = DA1AF9C819172018002CAC7A /* data.csv */; };
+		DA1AF9CC19172C94002CAC7A /* PMHeatMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1AF9CB19172C94002CAC7A /* PMHeatMapView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,10 @@
 		DA1AF9BA19171C2C002CAC7A /* TimeBasedHeatMapTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TimeBasedHeatMapTests-Info.plist"; sourceTree = "<group>"; };
 		DA1AF9BC19171C2C002CAC7A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DA1AF9BE19171C2D002CAC7A /* TimeBasedHeatMapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeBasedHeatMapTests.m; sourceTree = "<group>"; };
+		DA1AF9C819172018002CAC7A /* data.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data.csv; sourceTree = "<group>"; };
+		DA1AF9CA19172C94002CAC7A /* PMHeatMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMHeatMapView.h; sourceTree = "<group>"; };
+		DA1AF9CB19172C94002CAC7A /* PMHeatMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMHeatMapView.m; sourceTree = "<group>"; };
+		DA1AF9CD1917343C002CAC7A /* PMDataStructures.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMDataStructures.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,11 +121,15 @@
 		DA1AF99A19171C2C002CAC7A /* TimeBasedHeatMap */ = {
 			isa = PBXGroup;
 			children = (
+				DA1AF9C819172018002CAC7A /* data.csv */,
 				DA1AF9A619171C2C002CAC7A /* PMAppDelegate.h */,
 				DA1AF9A719171C2C002CAC7A /* PMAppDelegate.m */,
 				DA1AF9A919171C2C002CAC7A /* MainMenu.xib */,
 				DA1AF9AC19171C2C002CAC7A /* Images.xcassets */,
 				DA1AF99B19171C2C002CAC7A /* Supporting Files */,
+				DA1AF9CA19172C94002CAC7A /* PMHeatMapView.h */,
+				DA1AF9CB19172C94002CAC7A /* PMHeatMapView.m */,
+				DA1AF9CD1917343C002CAC7A /* PMDataStructures.h */,
 			);
 			path = TimeBasedHeatMap;
 			sourceTree = "<group>";
@@ -233,6 +243,7 @@
 			files = (
 				DA1AF99F19171C2C002CAC7A /* InfoPlist.strings in Resources */,
 				DA1AF9AD19171C2C002CAC7A /* Images.xcassets in Resources */,
+				DA1AF9C919172018002CAC7A /* data.csv in Resources */,
 				DA1AF9A519171C2C002CAC7A /* Credits.rtf in Resources */,
 				DA1AF9AB19171C2C002CAC7A /* MainMenu.xib in Resources */,
 			);
@@ -254,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA1AF9A119171C2C002CAC7A /* main.m in Sources */,
+				DA1AF9CC19172C94002CAC7A /* PMHeatMapView.m in Sources */,
 				DA1AF9A819171C2C002CAC7A /* PMAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
