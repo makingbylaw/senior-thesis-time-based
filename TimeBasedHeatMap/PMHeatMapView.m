@@ -56,7 +56,6 @@
         // Unpack the data structure
         id sectionValue = [section objectAtIndex:i];
         if (sectionValue == [NSNull null]) {
-            NSLog(@"Skipped %d", i);
             continue;
         }
         PMHeatMapData heatMapData;
@@ -64,11 +63,11 @@
         
         // Calculate the current color
         NSColor *color;
-        if (i % 2 == 0) {
-            color = [NSColor redColor];
-        } else {
-            color = [NSColor blueColor];
-        }
+        
+        // For now go along the red scale adjusting the value
+        float alpha = heatMapData.frequency/560.0f;
+        //NSLog(@"Alpha: %f", alpha);
+        color = [NSColor colorWithRed:1.0f green:0.0f blue:0.0f alpha:alpha];
         CGContextSetFillColorWithColor(contextRef, [color CGColor]);
         
         // Calculate x and y coordinates as well as size

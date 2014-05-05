@@ -12,10 +12,14 @@
 
 #define HOURS 24
 #define SECTIONS 16
+#define FONT_SIZE 50
 
 @interface PMAppDelegate() {
     NSMutableArray *_data;
 }
+
+@property (nonatomic, strong) PMHeatMapView *view;
+@property (nonatomic, strong) NSTextField *label;
 
 @end
 
@@ -83,23 +87,49 @@
     // Also, add the last line
     [_data setObject:sectionData atIndexedSubscript:lastHour];
     
-    /*
-    // Count the data rows for audit
-    int total = 0;
-    for (int i = 0; i < HOURS; i++) {
-        if ([_data objectAtIndex:i] == [NSNull null])
-            continue;
-        
-        NSArray *a = (NSArray*)[_data objectAtIndex:i];
-        for (int j = 0; j < SECTIONS; j++) {
-            if ([a objectAtIndex:j] != [NSNull null])
-                total ++;
-        }
+    // Build the view
+    self.view = [[PMHeatMapView alloc] initWithFrame:CGRectMake(0, FONT_SIZE, self.window.frame.size.width, self.window.frame.size.height - FONT_SIZE) andData:_data];
+    [self.window.contentView addSubview:self.view];
+    
+    // Build the label
+    self.label = [[NSTextField alloc] initWithFrame:NSMakeRect(0, 0, self.window.frame.size.width, FONT_SIZE)];
+    [self.label setFont:[NSFont fontWithName:@"Helvetica" size:30.0f]];
+    [self.label setTextColor:[NSColor blackColor]];
+    [self.label setBezeled:NO];
+    [self.label setDrawsBackground:NO];
+    [self.label setEditable:NO];
+    [self.label setSelectable:NO];
+    [self.label setStringValue:@"12:00 a.m."];
+    [self.label setAlignment:NSCenterTextAlignment];
+    [self.label setAutoresizingMask:NSViewWidthSizable |  NSViewHeightSizable];
+    [self.window.contentView addSubview:self.label];
+    
+    // THe timer for changing hours
+    [NSTimer scheduledTimerWithTimeInterval:2.0
+                                     target:self
+                                   selector:@selector(incrementTime:)
+                                   userInfo:nil
+                                    repeats:YES];
+}
+
+- (void) incrementTime:(NSTimer*)timer {
+    if (self.view.currentHour >= 23) {
+        self.view.currentHour = 0;
+    } else {
+        self.view.currentHour ++;
     }
-    NSLog(@"%d", total);
-    */
-    PMHeatMapView *view = [[PMHeatMapView alloc] initWithFrame:CGRectMake(0, 0, self.window.frame.size.width, self.window.frame.size.height) andData:_data];
-    [self.window.contentView addSubview:view];
+    
+    if (self.view.currentHour == 0) {
+        [self.label setStringValue:@"12:00 a.m."];
+    } else if (self.view.currentHour == 12) {
+        [self.label setStringValue:@"12:00 p.m."];
+    } else if (self.view.currentHour > 12) {
+        NSInteger adjusted = self.view.currentHour - 12;
+        [self.label setStringValue:[NSString stringWithFormat:@"%ld:00 p.m.", (long)adjusted]];
+    } else {
+        [self.label setStringValue:[NSString stringWithFormat:@"%ld:00 a.m.", (long)self.view.currentHour]];
+    }
+    [self.view setNeedsDisplay: YES];
 }
 
 @end
