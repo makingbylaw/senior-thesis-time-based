@@ -7,7 +7,34 @@ for each venue
 
 for each checkin
 	if we know about venue from the above loop (i.e. if it is in sf)
-		get the section of this venue
-		update frequency of visits to section
+		section = get the section of this venue (we figured this out above)
+		hour = get the time for this checkin (in the data file)
+		update frequency of visits to this section for this hour
 	else
 		ignore
+
+
+Data Structure:
+
+Hour
+	-> Section
+		-> Frequency
+
+e.g. if we had 3 sections
+
+	0 o'clock
+		1	-> 50 checkins
+		2   -> 0 checkins
+		3   -> 2 checkins
+	1 o'clock
+		1	-> 33 checkins
+		2   -> 5 checkins
+		3   -> 7 checkins
+	2 o'clock
+		...
+		...
+		...
+	23 o'clock
+		1	-> 40 checkins
+		2   -> 5 checkins
+		3   -> 10 checkins
