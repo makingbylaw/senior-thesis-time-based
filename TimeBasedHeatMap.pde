@@ -7,11 +7,15 @@ TimeData[] data = new TimeData[24];
 int frames = 0;
 int currentHour = 0;
 int maxFrequency = 0;
+PImage bg;
 
 void setup() {
-  size(600, 600 + TEXT_SIZE);
+  size(872, 682 + TEXT_SIZE);
   background(#ffffff);
   noStroke();
+  
+  // We can change the background image here. It must be the same size the the sketch.
+  bg = loadImage("maparea_with_time_bw.png");
   
   Table table = loadTable(FILENAME + ".csv", "header");
 
@@ -57,7 +61,8 @@ void setup() {
 void draw() {
   
   // Clear the background
-  background(#ffffff);
+  //background(#ffffff); // This is a white background
+  background(bg); // This uses the image background
   
   // Change the hours every two seconds
   frames++;
@@ -109,8 +114,9 @@ void drawHeatMap() {
       return; // Don't do anything if there is nothing to draw
   
   // Work out the common width and size
-  float commonWidth = min(width, height);
-  float boxSize = commonWidth / SECTION_DIMENSION;
+  //float commonWidth = min(width, height);
+  float boxSizeX = width / SECTION_DIMENSION;
+  float boxSizeY = (height - TEXT_SIZE) / SECTION_DIMENSION;
   
   // Loop through each section and draw it
   for (int i = 0; i < SECTIONS; i++) {
@@ -128,11 +134,11 @@ void drawHeatMap() {
     fill(c);
     
     // Calculate x and y coordinates as well as size
-    float x = ((SECTION_DIMENSION - 1) - heatMapData.x) * boxSize;
-    float y = ((SECTION_DIMENSION - 1) - heatMapData.y) * boxSize + TEXT_SIZE;
+    float x = ((SECTION_DIMENSION - 2) - heatMapData.x) * boxSizeX;
+    float y = ((SECTION_DIMENSION - 1) - heatMapData.y) * boxSizeY + TEXT_SIZE;
     
     // Draw a rectangle
-    rect(x, y, boxSize, boxSize);
+    rect(x, y, boxSizeX, boxSizeY);
     
   }  
 }
