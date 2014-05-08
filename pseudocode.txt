@@ -1,0 +1,13 @@
+for each venue
+	if latlng in sf
+		section = where latlng falls in pre-determined grid
+	else
+		ignore
+
+
+for each checkin
+	if we know about venue from the above loop (i.e. if it is in sf)
+		get the section of this venue
+		update frequency of visits to section
+	else
+		ignore
